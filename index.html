@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Candy Crochet</title>
+  <style>
+    /* Paleta de colores cálidos */
+    :root {
+      --color-principal: #D97C2B;   /* Naranja cálido */
+      --color-secundario: #F5A623;  /* Amarillo dorado */
+      --color-fondo: #FFF8F0;       /* Crema muy suave */
+      --color-texto: #3E3E3E;       /* Gris oscuro para buen contraste */
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: var(--color-principal);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    nav {
+      margin-top: 1rem;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .banner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    
+    /* Imagen de banner referencial (SVG) */
+    .banner svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    
+    /* Tus estilos generales aquí */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    
+    /* Otros estilos generales... */
+
+    /* Media Query para dispositivos con ancho máximo de 768px */
+    @media (max-width: 768px) {
+      .productos {
+        flex-direction: column;
+        align-items: center;
+      }
+    } 
+     .producto {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    
+    .producto:hover {
+      transform: scale(1.02);
+    }
+    
+    .producto img, .producto svg {
+      width: 100%;
+      display: block;
+    }
+    
+    .producto .info {
+      padding: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Candy Crochet</h1>
+    <p>Productos de crochet con un toque dulce y creativo</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Banner referencial -->
+    <section class="banner">
+      <!-- Imagen SVG de banner con gradiente cálido -->
+      <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gradBanner" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#F5A623;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#D97C2B;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="400" fill="url(#gradBanner)" />
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
+              font-size="60" fill="#fff" font-family="Helvetica Neue, Arial, sans-serif">
+          ¡Bienvenidos a Candy Crochet!
+        </text>
+      </svg>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos">
+      <h2 style="text-align:center; margin-bottom: 1.5rem;">Nuestros Productos</h2>
+      <div class="productos">
+        <!-- Producto 1: Imagen referencial en SVG -->
+        <div class="producto">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gradProducto1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#F5A623; stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#D97C2B; stop-opacity:1" />
+              </radialGradient>
+            </defs>
+            <circle cx="150" cy="150" r="140" fill="url(#gradProducto1)" />
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" 
+                  font-size="30" fill="#fff" font-family="Helvetica Neue, Arial, sans-serif">
+              Crochet
+            </text>
+            <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" 
+                  font-size="18" fill="#fff" font-family="Helvetica Neue, Arial, sans-serif">
+              Producto 1
+            </text>
+          </svg>
+          <div class="info">
+            <h3>Producto 1</h3>
+            <p>Descripción breve del producto, destacando calidad y creatividad.</p>
+          </div>
+        </div>
+        <!-- Producto 2: Otra imagen referencial -->
+        <div class="producto">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gradProducto2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#D97C2B; stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#F5A623; stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect x="20" y="20" width="260" height="260" rx="30" fill="url(#gradProducto2)" />
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
+                  font-size="24" fill="#fff" font-family="Helvetica Neue, Arial, sans-serif">
+              Detalle
+            </text>
+          </svg>
+          <div class="info">
+            <h3>Producto 2</h3>
+            <p>Otra opción deliciosa en crochet, ideal para decorar y regalar.</p>
+          </div>
+        </div>
+        <!-- Puedes añadir más productos siguiendo este modelo -->
+      </div>
+    </section>
+  </div>
+
+  <footer id="contacto">
+    <p>&copy; 2025 Candy Crochet. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
